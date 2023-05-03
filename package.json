@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Pure JS PDF shrink tool.",
   "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "yarn lint:types",
     "lint:types": "tsc --noEmit",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
