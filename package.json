@@ -1,0 +1,35 @@
+{
+  "name": "pdf-shrink",
+  "version": "1.0.0",
+  "description": "Pure JS PDF shrink tool.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "yarn lint:types",
+    "lint:types": "tsc --noEmit",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdeniau/pdf-shrink.git"
+  },
+  "keywords": [
+    "PDF",
+    "shrink",
+    "optimize",
+    "deduplicate"
+  ],
+  "author": "Julien Deniau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdeniau/pdf-shrink/issues"
+  },
+  "homepage": "https://github.com/jdeniau/pdf-shrink#readme",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "typescript": "^5.0.4"
+  }
+}
