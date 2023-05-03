@@ -84,7 +84,6 @@ function findDocumentImages(pdfDoc: PDFDocument): Array<[PDFRef, PDFStream]> {
  * Find all duplicated images in a list of objects
  */
 function findAllDuplicatedImages(
-  pdfDoc: PDFDocument,
   allIndirectObjects: Array<[PDFRef, PDFStream]>
 ): DuplicatedImageMap {
   return allIndirectObjects.reduce((carry, [ref, object]) => {
@@ -100,13 +99,13 @@ function findAllDuplicatedImages(
 }
 
 export async function deduplicatePdfImage(
-  buffer: Buffer
+  buffer: string | Uint8Array | ArrayBuffer
 ): Promise<PDFDocument> {
   const pdfDoc = await PDFDocument.load(buffer);
 
   const allIndirectObjects = findDocumentImages(pdfDoc);
 
-  const duplicatedObjects = findAllDuplicatedImages(pdfDoc, allIndirectObjects);
+  const duplicatedObjects = findAllDuplicatedImages(allIndirectObjects);
 
   duplicatedObjects.forEach(async (object) => {
     const { refs } = object;

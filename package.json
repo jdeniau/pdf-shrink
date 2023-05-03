@@ -9,7 +9,7 @@
     "lint": "yarn lint:types",
     "lint:types": "tsc --noEmit",
     "test": "jest",
-    "build": "tsc",
+    "build": "rm -rf dist/*; tsc",
     "prepublishOnly": "yarn build"
   },
   "repository": {
