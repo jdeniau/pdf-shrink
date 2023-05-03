@@ -1,6 +1,6 @@
 {
   "name": "pdf-shrink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pure JS PDF shrink tool.",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
