@@ -1,3 +1,6 @@
-import { deduplicatePdfImage } from './deduplicateImages';
+import { deduplicatePdfImage } from './deduplicateImages.js';
+import type { ShrinkImageFunction } from './types.js';
 
-export default deduplicatePdfImage;
+const shrinkPdf: ShrinkImageFunction = deduplicatePdfImage;
+
+export default shrinkPdf;
